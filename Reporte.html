@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Galgo Medical - Reporte de calidad</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+<div class="container-fluid">
+        <div class="row bg-secondary py-1 px-xl-5">
+		<a href="" class="text-decoration-none">
+                    <span class="h1 text-uppercase text-primary bg-dark px-2">Galgo</span>
+                    <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Medical</span>
+                </a>
+            <div class="col-lg-2 d-none d-lg-block">
+                <div class="d-inline-flex align-items-center h-100"> </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Sign in</button>
+                            <button class="dropdown-item" type="button">Sign up</button>
+                        </div>
+                    </div>
+                    <div class="btn-group mx-2">
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">ES</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item dropdown-link active" type="button">ES</button>
+                            <button class="dropdown-item" type="button">EN</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-dark mb-30">
+        <div class="row px-xl-5">
+            
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Inicio</a>
+                            <a href="#" class="nav-item nav-link">Productos</a>
+                            <a href="contact.html" class="nav-item nav-link active">Reporte</a>
+							<a href="#" class="nav-item nav-link">Normas</a>
+                            <a href="#" class="nav-item nav-link">Ayuda</a>
+                        </div>
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Breadcrumb Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="breadcrumb-item text-dark" href="#">Home</a>
+                    <span class="breadcrumb-item active">Report</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Quality Control</span></h2>
+        <div class="row px-xl-5">
+            <div class="col-lg-7 mb-5">
+                <div class="contact-form bg-light p-30">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="control-group">
+							<label>Selecciona el farmaco al que se le realizara el repote:
+                            <input type="text" class="form-control" id="name"  list="browsers" name="myBrowser" placeholder="Producto etiquetado"
+                                required="required" data-validation-required-message="Producto etiquetado" /> </label>
+								<datalist id="browsers">
+								  <option value="paracetamol">
+								  <option value="Ventonil">
+								  <option value="Nolotil">
+								  <option value="Eutoriox">
+								  <option value="Sintrom">
+								  <option value="Orfidal">
+								</datalist>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+							<label> 2-.Estabilidad del farmaco:</label>
+                            <label >se refiere al grado en que una sustancia o producto farmacéutico conserva, dentro de límites específicos y durante todo su período de almacenamiento y uso</label>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+						
+                        <div class="control-group">
+							<label> 3-.Buenas prácticas de fabricación para fármacos:</label>
+                            <label >Asegurar que los medicamentos elaborados tengan y mantengan las características de identidad, pureza, seguridad, eficacia y calidad requeridas para su uso.</label>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+							<label> 4-.Requisitos sanitarios que deben cumplir los fabricantes:</label>
+                            <label >Tener un certificado de análisis original del fabricante que cumpla con las especificaciones de calidad indicada en la edición vigente de la Farmacopea de los Estados Unidos Mexicanos y sus suplementos.</label>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+						
+						<div class="control-group">
+							<label> 5-.Instalación y operación de la Farmacovigilancia:</label>
+                            <label >Aplicación de procedimientos basados en la recolección sistemática y detallada de datos sobre los efectos perjudiciales que pueden suponerse inducidos por medicamentos en determinados grupos de población.</label>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+						<div class="control-group">
+							<label> 6-.Relativa a las condiciones de seguridad e higiene en los edificios, locales, instalaciones y áreas de los centros de trabajo.:</label>
+                            <label >llevar mascarilla, lavarse las manos antes y después de cada tarea y también al quitarse los guantes, vacunarse de la hepatitis B, tétanos y difteria, vestir prendas limpias y tener un espacio de trabajo ordenado y limpio.</label>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+						<div class="control-group">
+							<label> 7-.Recipientes sujetos a presión y calderas: </label>
+							<div class="control-group"></div>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+						<div class="control-group">
+							<label> 8-.Colores y señales de seguridad e higiene:</label>
+                            <div class="control-group"></div>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+						<div class="control-group">
+							<label>9-.Identificación, clasificación y los listados de los residuos peligrosos:
+                            <input type="text" class="form-control" id="lista"  list="classi" name="lista" placeholder="Clasificación"
+                                required="required" data-validation-required-message="Clasificacion" /> </label>
+								<datalist id="classi">
+								  <option value="Corrosivo">
+								  <option value="Reactivo">
+								  <option value="Explosivo">
+								  <option value="Toxico">
+								  <option value="Inflamable">
+								  <option value="Biologico infeccioso">
+								</datalist>
+                            <p class="help-block text-danger"></p>
+                        </div>
+						
+						<div class="control-group">
+							<label> 10-.Protección ambiental-Salud ambiental-Residuos peligrosos biológico-infecciosos-Clasificación:</label>
+                            <label >Establece los requisitos para la separación, envasado, almacenamiento, recolección, transporte, tratamiento y disposición final de los residuos peligrosos biológico-infecciosos que se generan en establecimientos que presten atención médica.</label>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>
+						<div class="control-group">
+							<label> 11-.Especificaciones técnicas para la producción, cuidado y uso de los animales de laboratorio:</label>
+                            <label >Cumple con las normas Básicas de Trabajo Con Animales de Laboratorio</label>
+							<div class="control-group"></div>
+								<input type = "radio" name = "preg1" value = "foo" /> Si cumple
+								<input type = "radio" name = "preg1" value = "bar" /> No cumple
+                            <p class="help-block text-danger"></p>
+                        </div>						
+                        <div>
+                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-5">
+                <div class="bg-light p-30 mb-5">
+				<img src="img/personal.jpg"> </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
