@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>GalgoMedical - Registro</title>
-	<link rel="shortcut icon" href="img/logogeneral.png">
+    <link rel="shortcut icon" href="img/logogeneral.png">
     <link rel="stylesheet" href="css/stylelogin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 	<script>
+    <script>
         function validarFormulario(event) {
             event.preventDefault();
             
-            var nombre = document.getElementById("nombre").value.trim();
-            var rol = document.getElementById("rol").value.trim();
-            var correo = document.getElementById("correo").value.trim();
-			var password = document.getElementById("password").value.trim();
+            var nombre = document.getElementsByName("nombre")[0].value.trim();
+            var rol = document.getElementsByName("rol")[0].value.trim();
+            var correo = document.getElementsByName("correo")[0].value.trim();
+            var password = document.getElementsByName("password")[0].value.trim();
+            var confirmPassword = document.getElementById("confirm_password").value.trim();
             
             var errores = [];
-			
+            
             if (nombre === "") {
                 errores.push("El campo de Nombre de Usuario es obligatorio.");
             }
@@ -29,53 +30,59 @@
             if (password === "") {
                 errores.push("El campo de Contraseña es obligatorio.");
             }
+            if (password !== confirmPassword) {
+                errores.push("Las contraseñas no coinciden.");
+            }
             
             if (errores.length > 0) {
                 alert(errores.join("\n"));
             } else {
+                document.forms[0].submit();
 				window.location.href = "login.html"
             }
         }
+
+        // Mostrar la fecha actual
+        window.onload = function() {
+            var fecha = new Date().toLocaleDateString();
+            document.getElementById("fecha_registro").innerHTML = "Fecha actual: " + fecha;
+        };
     </script>
-  </head>
-	
-  <body>
-    <form onsubmit="validarFormulario(event)">
+</head>
+
+<body>
+    <form action="insertar.php" method="POST" onsubmit="validarFormulario(event)">
         <h1 class="title">Registro</h1>
         <label>
             <i class="fa-solid fa-user"></i>
             <input placeholder="Usuario" type="text" name="nombre" required>
         </label>
-		<label>
-			<i class="fa-solid fa-user"></i>
-			<input type="text" name="rol" list="Roles" placeholder="Rol" required>
-			<datalist id="Roles">
-				<option value="Administrador">
-				<option value="Empleado">
-			</datalist>
-		</label>
-		<label>
-			<i class="fa-solid fa-user"></i>
-			<input placeholder="Correo" type="email" name="correo" required>
-		</label>
+        <label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="rol" list="Roles" placeholder="Rol" required>
+            <datalist id="Roles">
+                <option value="Administrador">
+                <option value="Empleado">
+            </datalist>
+        </label>
+        <label>
+            <i class="fa-solid fa-user"></i>
+            <input placeholder="Correo" type="email" name="correo" required>
+        </label>
         <label>
             <i class="fa-solid fa-lock"></i>
             <input placeholder="Contraseña" type="password" name="password" required>
         </label>
-		<label>
+        <label>
             <i class="fa-solid fa-lock"></i>
-            <input placeholder="Confirmar Contraseña" type="password" id="password" required>
+            <input placeholder="Confirmar Contraseña" type="password" id="confirm_password" required>
         </label>
-		<label>
-			<div name="fecha_registro"></div>
-			<script>
-				var fecha = new Date().toLocaleDateString();
-				document.getElementById("fecha_registro").innerHTML = "Fecha actual: " + fecha;
-			</script>
-		</label>
-		<a href="login.html" class="link">Inicio de Sesion</a>
-		<input type="submit" class="button" value="Registrar"></input>
+        <label>
+            <div id="fecha_registro"></div> <!-- Cambiado a id -->
+        </label>
+        <a href="login.html" class="link">Inicio de Sesion</a>
+        <input type="submit" class="button" value="Registrar">
     </form>
 
-  </body>
+</body>
 </html>
